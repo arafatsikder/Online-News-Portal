@@ -33,3 +33,26 @@
 .nav-item{
     padding: 10px 30px;
 }
+
+#news-category{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    
+}
+
+#news-category li a{
+    text-decoration: none;
+    color : rgb(28, 28, 28);
+    padding : 10px 20px;
+}
+
+#news-category li a:active{
+    color:white;
+    background-color: rgb(28, 28, 28); 
+}
+
+#news-category li a:hover {
+    color:white;
+    background-color: rgb(28, 28, 28); 
+  }
