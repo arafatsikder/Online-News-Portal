@@ -56,3 +56,18 @@
     color:white;
     background-color: rgb(28, 28, 28); 
   }
+
+  .found-message{
+    /* border: 5px solid; */
+    margin: auto;
+    width: 60%;
+    
+    margin-top: 50px;
+    background-color: rgb(205, 205, 205);
+    color: rgb(7, 7, 7);
+ 
+  }
+
+  #found{
+    padding: 10px 0px;
+  }
