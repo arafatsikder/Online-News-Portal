@@ -3,3 +3,33 @@
     font-family: 'Oswald', sans-serif !important;
     font-size: 40px;
   }
+
+.link{
+    padding: 10px 20px;
+}
+
+.link a{
+    text-decoration: none;
+    font-size: 20px;
+    color:rgb(52, 52, 52);
+    
+}
+
+.link a:hover {
+    color: white;
+    background-color: blueviolet;    
+    border-radius: 5px;
+  }
+
+.link a:active {
+    color: blueviolet;
+}
+
+#user-picture{
+    border: 1px solid blueviolet;
+    border-radius: 50%;
+}
+
+.nav-item{
+    padding: 10px 30px;
+}
