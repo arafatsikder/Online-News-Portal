@@ -75,4 +75,13 @@
   .details{
     display: flex;
     justify-content: space-evenly;
+    margin :;
+  }
+
+  .arrow{
+    color:rgb(39, 39, 39)
+  }
+
+  .color{
+    background-color: rgb(254, 247, 239);
   }

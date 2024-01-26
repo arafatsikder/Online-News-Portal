@@ -18,20 +18,20 @@ const displayNews = papers =>{
         
         const div = document.createElement('div');
         div.innerHTML = `
-        <div class="card mb-12 g-0 " style="max-width: 100%">
+        <div class="card mb-12 my-5 " style="max-width: 100%">
             <div class="row ">
                 <div class="col-md-4">
                     <img src="${paper.image_url}" class="img-fluid rounded-start m-3" height = "400px" width = "400px" alt="...">
                 </div>
                 <div class="col-md-8">
-                    <div class="card-body">
-                        <h4 class="card-title m-3">${paper.title}</h4>
+                    <div class="card-body m-1">
+                        <h4 class="card-title ">${paper.title}</h4>
                         <p class="card-text m-3 text-secondary">${paper.details.slice(0,500)}...</p>
                         <p class="card-text"><small class="text-body-secondary"></small></p>
                     </div>
                 </div>
-                <div class = "d-flex details">
-                    <div class = "d-flex mx-3 mb-3">
+                <div class = "d-flex details ">
+                    <div class = "d-flex">
                         <div>
                             <img src = "${paper.author.img}" class = "rounded-circle" height = 50px weight = 50px>
                         </div>
@@ -52,8 +52,8 @@ const displayNews = papers =>{
                     <div>
                         <b>Rating</b>: 4.5
                     </div>
-                    <div>
-                    <a href = "#"><i class='fas fa-arrow-right' style='font-size:24px'></i></a>
+                    <div class = "mx-5">
+                        <a href = "#" class = "arrow"><i class='fas fa-arrow-right' style='font-size:24px'></i></a>
                     </div>
                 </div>
             </div>
