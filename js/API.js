@@ -52,7 +52,8 @@ const displayNews = papers =>{
                     <div>
                         <b>Rating</b>: 4.5
                     </div>
-                    <div>a
+                    <div>
+                    <a href = "#"><i class='fas fa-arrow-right' style='font-size:24px'></i></a>
                     </div>
                 </div>
             </div>
