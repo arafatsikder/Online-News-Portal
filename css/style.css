@@ -71,3 +71,8 @@
   #found{
     padding: 10px 10px;
   }
+
+  .details{
+    display: flex;
+    justify-content: space-evenly;
+  }
