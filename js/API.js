@@ -40,16 +40,17 @@ const displayNews = papers =>{
                             <p>${paper.author.published_date.slice(0,10)}</p>
                         </div>
                     </div>
-                    <div class = "d-flex">    
+                    <div class = "d-flex g-2">    
                         <div>
-                            <span><i class='fab fa-phabricator' style='font-size:24px color: #234567'></i></span>
+                            <p><i class='fab fa-phabricator' style='font-size:24px'></i></p>
                         </div>
-                        <div>
-                            <p>${paper.total_view}</p>
+                        <div class = "px-2">
+                            <p> ${paper.total_view}</p>
                         </div>
                     
                     </div>
-                    <div>a
+                    <div>
+                        <b>Rating</b>: 4.5
                     </div>
                     <div>a
                     </div>
