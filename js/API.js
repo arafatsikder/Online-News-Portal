@@ -53,7 +53,7 @@ const displayNews = papers =>{
                         <b>Rating</b>: 4.5
                     </div>
                     <div class = "mx-5">
-                        <a href = "#" class = "arrow"><i class='fas fa-arrow-right' style='font-size:24px'></i></a>
+                        <a href = "#" class = "arrow" onclick = "displayModal()"><i  data-bs-toggle="modal" data-bs-target="#staticBackdrop" class='fas fa-arrow-right' style='font-size:24px'></i></a>
                     </div>
                 </div>
             </div>
@@ -62,4 +62,8 @@ const displayNews = papers =>{
         newsSection.appendChild(div);
     });
 
+}
+
+const displayModal = () =>{
+console.log("button clicked");
 }
