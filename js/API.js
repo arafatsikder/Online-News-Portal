@@ -6,11 +6,17 @@ const loadNews = (search) => {
 }
 
 const displayNews = papers =>{
-    // if(papers.lenght > 0){
-    //     const found = document.getElementById('found');
-    //     found.classList.remove('d-none');
-    //     // found.innerText = `${papers.length} items found for this category`
-    // }
+    const found = document.getElementById('found');
+    if(papers.length > 0){
+        
+        found.classList.remove('d-none');
+        found.innerText = `${papers.length} items found for this category`
+    }
+
+    else{
+        found.classList.remove('d-none');
+        found.innerText = `No items found for this category`
+    }
 
     const newsSection = document.getElementById('news-section');
     newsSection.innerText = "";
@@ -65,5 +71,6 @@ const displayNews = papers =>{
 }
 
 const displayModal = () =>{
-console.log("button clicked");
+    const modalMain = document.getElementById('modal-main');
+
 }
