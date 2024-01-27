@@ -1,8 +1,10 @@
+const spinner = document.getElementById('spinner');
 const loadNews = (search) => {
     url = `https://openapi.programming-hero.com/api/news/category/${search}`
     fetch(url)
     .then(res => res.json())
     .then(data => displayNews(data.data))
+    spinner.classList.remove('d-none');
 }
 
 const displayNews = papers =>{
@@ -66,6 +68,8 @@ const displayNews = papers =>{
         </div>
         `
         newsSection.appendChild(div);
+        spinner.classList.add('d-none');
+
     });
 
 }
