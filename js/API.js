@@ -59,7 +59,7 @@ const displayNews = papers =>{
                         <b>Rating</b>: 4.5
                     </div>
                     <div class = "mx-5">
-                        <a href = "#" class = "arrow" onclick = "displayModal()"><i  data-bs-toggle="modal" data-bs-target="#staticBackdrop" class='fas fa-arrow-right' style='font-size:24px'></i></a>
+                        <a href = "#" class = "arrow" onclick = "callModal('${paper._id}')"><i  data-bs-toggle="modal" data-bs-target="#staticBackdrop" class='fas fa-arrow-right' style='font-size:24px'></i></a>
                     </div>
                 </div>
             </div>
@@ -70,7 +70,19 @@ const displayNews = papers =>{
 
 }
 
-const displayModal = () =>{
-    const modalMain = document.getElementById('modal-main');
+const callModal = (id) =>{
+    url = ` https://openapi.programming-hero.com/api/news/${id}`
+    fetch(url)
+    .then(res => res.json())
+    .then(data => displayModal(data.data[0]))
+}
 
+const displayModal = (details) =>{
+    console.log(details);
+    const modalMain = document.getElementById('modal-main');
+    modalMain.innerHTML = `
+    <img src = "${details.image_url}" height = "300px" width = "450px">
+    <p class = "m-2">${details.details}</p>
+    `
+    
 }
