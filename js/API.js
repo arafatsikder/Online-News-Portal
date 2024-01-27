@@ -81,8 +81,31 @@ const displayModal = (details) =>{
     console.log(details);
     const modalMain = document.getElementById('modal-main');
     modalMain.innerHTML = `
-    <img src = "${details.image_url}" height = "300px" width = "450px">
-    <p class = "m-2">${details.details}</p>
+    <img src = "${details.image_url}" height = "300px" width = "460px">
+    <p class = "mx-2 my-4">${details.details}</p>
+    <div class = "d-flex details ">
+                    <div class = "d-flex">
+                        <div>
+                            <img src = "${details.author.img}" class = "rounded-circle" height = 50px weight = 50px>
+                        </div>
+                        <div class = "px-3">
+                            <h6>${details.author.name}</h6>
+                            <p>${details.author.published_date.slice(0,10)}</p>
+                        </div>
+                    </div>
+                    <div class = "d-flex g-2">    
+                        <div>
+                            <p><i class='fab fa-phabricator' style='font-size:24px'></i></p>
+                        </div>
+                        <div class = "px-2">
+                            <p> ${details.total_view}</p>
+                        </div>
+                    
+                    </div>
+                    <div>
+                        <b>Rating</b>: 4.5
+                    </div>
+                    
+                </div>
     `
-    
 }
