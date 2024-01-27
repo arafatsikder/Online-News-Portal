@@ -18,6 +18,7 @@ const displayNews = papers =>{
     else{
         found.classList.remove('d-none');
         found.innerText = `No items found for this category`
+        spinner.classList.add('d-none');spinner.classList.add('d-none');
     }
 
     const newsSection = document.getElementById('news-section');
@@ -29,23 +30,23 @@ const displayNews = papers =>{
         <div class="card mb-12 my-5 " style="max-width: 100%">
             <div class="row ">
                 <div class="col-md-4">
-                    <img src="${paper.image_url}" class="img-fluid rounded-start m-3" height = "400px" width = "400px" alt="...">
+                    <img src="${paper.image_url? paper.image_url : 'No Image Found For This News'}" class="img-fluid rounded-start m-3" height = "400px" width = "400px" alt="...">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body m-1">
-                        <h4 class="card-title ">${paper.title}</h4>
-                        <p class="card-text m-3 text-secondary">${paper.details.slice(0,500)}...</p>
+                        <h4 class="card-title ">${paper.title? paper.title : 'No Title Found'}</h4>
+                        <p class="card-text m-3 text-secondary">${paper.details? paper.details.slice(0,500) : 'No Details Found'}...</p>
                         <p class="card-text"><small class="text-body-secondary"></small></p>
                     </div>
                 </div>
                 <div class = "d-flex details ">
                     <div class = "d-flex">
                         <div>
-                            <img src = "${paper.author.img}" class = "rounded-circle" height = 50px weight = 50px>
+                            <img src = "${paper.author.img? paper.author.img : 'No Author Image Found'}" class = "rounded-circle" height = 50px weight = 50px>
                         </div>
                         <div class = "px-3">
-                            <h6>${paper.author.name}</h6>
-                            <p>${paper.author.published_date.slice(0,10)}</p>
+                            <h6>${paper.author.name? paper.author.name : 'No Author Name Found'}</h6>
+                            <p>${paper.author.published_date? paper.author.published_date.slice(0,10) : 'No Published Date Found'}</p>
                         </div>
                     </div>
                     <div class = "d-flex g-2">    
@@ -53,7 +54,7 @@ const displayNews = papers =>{
                             <p><i class='fab fa-phabricator' style='font-size:24px'></i></p>
                         </div>
                         <div class = "px-2">
-                            <p> ${paper.total_view}</p>
+                            <p> ${paper.total_view? paper.total_view : 'No View Number Found'}</p>
                         </div>
                     
                     </div>
