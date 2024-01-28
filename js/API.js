@@ -8,6 +8,7 @@ const loadNews = (search) => {
 }
 
 const displayNews = papers =>{
+    // papers.total_view.sort();
     const found = document.getElementById('found');
     if(papers.length > 0){
         
@@ -39,7 +40,7 @@ const displayNews = papers =>{
                         <p class="card-text"><small class="text-body-secondary"></small></p>
                     </div>
                 </div>
-                <div class = "d-flex details ">
+                <div class = "d-flex details m-3">
                     <div class = "d-flex">
                         <div>
                             <img src = "${paper.author.img? paper.author.img : 'No Author Image Found'}" class = "rounded-circle" height = 50px weight = 50px>
